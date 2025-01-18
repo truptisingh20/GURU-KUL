@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolution - Online E-Learning Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+        }
+
+        header.scrolled {
+            background: #1f4d77;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #34495e;
+            padding: 15px 0;
+            position: fixed;
+            top: 100px;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: #f1f1f1;
+            text-decoration: none;
+            padding: 15px 25px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            background-color: #e67e22;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('hero-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            padding: 120px 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            margin-top: 160px; /* Increased margin to ensure it's visible */
+            background-color: rgba(0, 0, 0, 0.5); /* Added a semi-transparent background to ensure text visibility */
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 20px auto;
+            animation: fadeInUp 2s ease-in-out;
+            font-weight: 300;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Content Section */
+        .content {
+            padding: 40px 20px;
+            background-color: #fff;
+            color: #333;
+            text-align: center;
+            animation: fadeInUp 1s ease-in-out;
+            margin-top: 20px;
+        }
+
+        .content h2 {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            text-transform: uppercase;
+        }
+
+        .content p {
+            font-size: 1.3rem;
+            color: #555;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto 40px auto;
+            text-align: justify;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .section-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-card h3 {
+            color: #3498db;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .section-card p {
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #34495e;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+            font-size: 1rem;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Evolution: Understanding Life's Journey</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="cell-biology.html">Cell Biology</a>
+    <a href="genetics.html">Genetics</a>
+    <a href="evolution.html">Evolution</a>
+</nav>
+
+<!-- Hero Section -->
+<div class="hero">
+    <h1>The Story of Evolution</h1>
+    <p>Explore the history of life on Earth, how species change over time, and the mechanisms driving the evolution of life forms.</p>
+</div>
+
+<!-- Content Section -->
+<div class="content" data-aos="fade-up">
+    <h2>What is Evolution?</h2>
+    <p>Evolution is the process by which species of organisms change over time through variations in their genetic makeup, which are passed down to future generations. This process explains the diversity of life forms on Earth and the adaptation of species to their environments.</p>
+</div>
+
+<!-- Section Cards -->
+<div class="section-card" data-aos="fade-up">
+    <h3>1. Charles Darwin and Natural Selection</h3>
+    <p>Charles Darwin's theory of natural selection suggests that organisms with traits better suited to their environment are more likely to survive and reproduce. Over time, these advantageous traits become more common in the population, leading to evolution.</p>
+</div>
+
+<div class="section-card" data-aos="fade-up">
+    <h3>2. The Mechanisms of Evolution</h3>
+    <p>Evolution occurs through several mechanisms, including natural selection, genetic drift, mutation, and gene flow. These mechanisms contribute to the changes in genetic traits within a population.</p>
+</div>
+
+<div class="section-card" data-aos="fade-up">
+    <h3>3. Evidence for Evolution</h3>
+    <p>There is substantial evidence for evolution, including fossil records, comparative anatomy, embryology, and molecular biology. These sources show how species have evolved over millions of years.</p>
+</div>
+
+<div class="section-card" data-aos="fade-up">
+    <h3>4. Genetic Mutations and Evolution</h3>
+    <p>Mutations are random changes in an organism's DNA that can introduce new genetic variations. Some mutations are beneficial and can lead to evolutionary changes in a population.</p>
+</div>
+
+<div class="section-card" data-aos="fade-up">
+    <h3>5. Speciation</h3>
+    <p>Speciation is the process by which new species arise from a single ancestral species. This can occur through mechanisms like geographic isolation, where populations of a species become separated and evolve independently over time.</p>
+</div>
+
+<div class="section-card" data-aos="fade-up">
+    <h3>6. Adaptation</h3>
+    <p>Adaptation is the process by which organisms become better suited to their environment through evolutionary changes. These adaptations can be structural, behavioral, or physiological, and they enhance an organism's survival and reproduction.</p>
+</div>
+
+<div class="section-card" data-aos="fade-up">
+    <h3>7. Evolution of Human Beings</h3>
+    <p>The evolution of humans from early primates is one of the most studied examples of evolution. Evidence from fossils, genetics, and comparative anatomy shows how human beings have evolved over millions of years.</p>
+</div>
+
+<div class="section-card" data-aos="fade-up">
+    <h3>8. Evolution and Extinction</h3>
+    <p>Extinction is the natural outcome for some species that are unable to adapt to environmental changes. The process of evolution continues as new species arise to fill ecological niches left by extinct species.</p>
+</div>
+
+<div class="section-card" data-aos="fade-up">
+    <h3>9. Coevolution</h3>
+    <p>Coevolution is the process by which two or more species influence each other's evolution. This can occur in predator-prey relationships, mutualistic relationships, or competitive relationships between species.</p>
+</div>
+
+<div class="section-card" data-aos="fade-up">
+    <h3>10. The Role of Genetic Drift</h3>
+    <p>Genetic drift is a mechanism of evolution that involves random changes in gene frequencies in a population. This can be particularly significant in small populations where chance events can cause large genetic changes over time.</p>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Evolution Learning. All Rights Reserved.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1200,
+        easing: 'ease-in-out',
+        once: true
+    });
+</script>
+
+</body>
+</html>

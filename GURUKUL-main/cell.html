@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cell Biology - Online E-Learning Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+        }
+
+        header.scrolled {
+            background: #1f4d77;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #34495e;
+            padding: 15px 0;
+            position: fixed;
+            top: 100px;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: #f1f1f1;
+            text-decoration: none;
+            padding: 15px 25px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            background-color: #e67e22;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('hero-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            padding: 120px 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            margin-top: 160px; /* Increased margin to ensure it's visible */
+            background-color: rgba(0, 0, 0, 0.5); /* Added a semi-transparent background to ensure text visibility */
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 20px auto;
+            animation: fadeInUp 2s ease-in-out;
+            font-weight: 300;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Content Section */
+        .content {
+            padding: 40px 20px;
+            background-color: #fff;
+            color: #333;
+            text-align: center;
+            animation: fadeInUp 1s ease-in-out;
+            margin-top: 20px;
+        }
+
+        .content h2 {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            text-transform: uppercase;
+        }
+
+        .content p {
+            font-size: 1.3rem;
+            color: #555;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto 40px auto;
+            text-align: justify;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .section-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-card h3 {
+            color: #3498db;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .section-card p {
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #34495e;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+            font-size: 1rem;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Cell Biology: Exploring Life's Building Blocks</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="cell-biology.html">Cell Biology</a>
+    <a href="genetics.html">Genetics</a>
+    <a href="evolution.html">Evolution</a>
+</nav>
+
+<!-- Hero Section -->
+<div class="hero">
+    <h1>Welcome to the World of Cells</h1>
+    <p>Explore the intricate and fascinating world of cells, their structures, and functions that power life as we know it.</p>
+</div>
+
+<!-- Content Section -->
+<div class="content" data-aos="fade-up">
+    <h2>What is Cell Biology?</h2>
+    <p>Cell biology is the study of cells, their physiological properties, their structure, the organelles they contain, interactions with their environment, their life cycle, division, and death. Understanding the role of cells in living organisms is crucial to the advancement of medical science, biotechnology, and more.</p>
+</div>
+
+<!-- Section Cards -->
+<div class="section-card" data-aos="fade-up">
+    <h3>1. Types of Cells</h3>
+    <p>Cells can be divided into two main categories: Prokaryotic and Eukaryotic. Prokaryotic cells are simpler and smaller, found in bacteria and archaea, whereas eukaryotic cells, with a defined nucleus, make up most living organisms, including plants, animals, and fungi.</p>
+</div>
+
+<div class="section-card" data-aos="fade-up">
+    <h3>2. Protein Synthesis</h3>
+    <p>Protein synthesis is the process by which cells create proteins from amino acids. This process occurs in two main stages: transcription and translation. In transcription, the DNA code is transcribed into messenger RNA (mRNA), which then travels to the ribosomes for translation, where the code is used to assemble a specific protein.</p>
+</div>
+
+<div class="section-card" data-aos="fade-up">
+    <h3>3. Genetic Material</h3>
+    <p>DNA (Deoxyribonucleic acid) carries the genetic information used in growth, development, functioning, and reproduction. In eukaryotic cells, DNA is located in the nucleus, while in prokaryotic cells, it is found in the cytoplasm. Genes within the DNA sequence direct cellular processes, including protein synthesis and cell replication.</p>
+</div>
+
+<div class="section-card" data-aos="fade-up">
+    <h3>4. Cellular Respiration</h3>
+    <p>Cellular respiration is the process by which cells convert glucose into energy in the form of ATP. This occurs in three stages: Glycolysis, the Citric Acid Cycle, and the Electron Transport Chain, occurring in different parts of the cell.</p>
+</div>
+
+<div class="section-card" data-aos="fade-up">
+    <h3>5. Photosynthesis</h3>
+    <p>Photosynthesis is the process by which plants, algae, and some bacteria convert light energy, carbon dioxide, and water into glucose and oxygen. This process occurs in the chloroplasts of plant cells and is essential for producing the oxygen we breathe.</p>
+</div>
+
+<div class="section-card" data-aos="fade-up">
+    <h3>6. Mitosis and Meiosis</h3>
+    <p>Mitosis is the process by which a single cell divides to form two identical daughter cells, crucial for growth, repair, and asexual reproduction. Meiosis, on the other hand, is the type of cell division that results in four genetically diverse gametes, essential for sexual reproduction.</p>
+</div>
+
+<div class="section-card" data-aos="fade-up">
+    <h3>7. Cell Cycle</h3>
+    <p>The cell cycle consists of stages that prepare the cell for division and ensure that it functions properly. The stages include Interphase (G1, S, G2) and M-phase (mitosis or meiosis), where the cell duplicates its contents and divides into two cells.</p>
+</div>
+
+<div class="section-card" data-aos="fade-up">
+    <h3>8. Organelles and Their Functions</h3>
+    <p>Cells contain various organelles such as the nucleus (stores genetic material), mitochondria (energy production), endoplasmic reticulum (protein and lipid synthesis), and lysosomes (digestion), each of which performs specific functions necessary for the cell's survival.</p>
+</div>
+
+<div class="section-card" data-aos="fade-up">
+    <h3>9. Cell Membrane</h3>
+    <p>The cell membrane is a semi-permeable barrier that surrounds the cell. It controls the movement of substances in and out of the cell and helps in communication with the external environment. The membrane is made up of a lipid bilayer with embedded proteins.</p>
+</div>
+
+<div class="section-card" data-aos="fade-up">
+    <h3>10. Cell Signaling</h3>
+    <p>Cell signaling involves the transmission of signals from the outside of the cell to the inside, influencing the cell's behavior and function. This can occur through various mechanisms, such as receptor-ligand binding, second messengers, and signaling pathways.</p>
+</div>
+
+<div class="section-card" data-aos="fade-up">
+    <h3>11. Apoptosis (Programmed Cell Death)</h3>
+    <p>Apoptosis is a controlled and regulated process that allows cells to die in a manner that does not harm the organism. This process is important for the development of tissues, the elimination of damaged cells, and the prevention of cancer.</p>
+</div>
+
+<div class="section-card" data-aos="fade-up">
+    <h3>12. Stem Cells</h3>
+    <p>Stem cells are undifferentiated cells that have the potential to become any type of cell in the body. They play a crucial role in growth, repair, and regeneration. Stem cells are used in regenerative medicine to treat various conditions.</p>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Cell Biology Learning. All Rights Reserved.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1200,
+        easing: 'ease-in-out',
+        once: true
+    });
+</script>
+
+</body>
+</html>

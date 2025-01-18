@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Bazaar - Gurukul Edition</title>
+  <style>
+    
+    /* General Styling */
+    body {
+      font-family: 'Merriweather', serif;
+      margin: 0;
+      padding: 0;
+      background: url('https://www.transparenttextures.com/patterns/old-map.png');
+      color: #3d2f1e;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      background-color: #4b2c20;
+      color: #f4e1c1;
+      padding: 1.5rem 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    img {
+      width: 100px; /* Adjust width */
+      border-radius: 50%; /* Makes the image circular */
+      object-fit: cover; /* Ensures the image is not distorted */
+    }    
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 3px;
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .search-bar input {
+      padding: 0.8rem;
+      border: 2px solid #4b2c20;
+      border-radius: 10px;
+      width: 320px;
+      font-size: 1.1rem;
+      background-color: #f4e1c1;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-bar button {
+      padding: 0.8rem 1.5rem;
+      background-color: #704c33;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .search-bar button:hover {
+      background-color: #3d2f1e;
+    }
+
+    /* Categories Section */
+    .categories {
+      background-color: #704c33;
+      color: #f4e1c1;
+      padding: 1.2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+      font-family: 'Merriweather', serif;
+    }
+
+    .categories button {
+      padding: 0.7rem 1.2rem;
+      background-color: #f4e1c1;
+      color: #3d2f1e;
+      border: 2px solid #3d2f1e;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .categories button:hover {
+      background-color: #3d2f1e;
+      color: #f4e1c1;
+    }
+
+    /* Book Grid */
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 2.5rem;
+      padding: 3rem;
+    }
+
+    .book-card {
+      background: #f4e1c1;
+      border: 1px solid #4b2c20;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .book-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+    }
+
+    .book-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .book-card-content {
+      padding: 1.8rem;
+      text-align: center;
+    }
+
+    .book-card h3 {
+      font-size: 1.7rem;
+      margin: 1.2rem 0;
+      color: #4b2c20;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .book-card .price {
+      color: #2f5d32;
+      font-weight: bold;
+      font-size: 1.3rem;
+      margin: 1.2rem 0;
+    }
+
+    .book-card button {
+      background-color: #704c33;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 0.9rem 1.8rem;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .book-card button:hover {
+      background-color: #3d2f1e;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #4b2c20;
+      color: #f4e1c1;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+    }
+
+    footer a {
+      color: #f4e1c1;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="image.png" alt="Company Logo">  
+  <h1> Gurukul Kitab Kharidi Kendra </h1>
+  <div class="search-bar">
+    <input type="text" id="search" placeholder="Search for books...">
+    <button onclick="searchBooks()">Search</button>
+  </div>
+</header>
+
+<div class="categories">
+  <button onclick="filterCategory('All')">All Books</button>
+  <button onclick="filterCategory('Class 11')">Class 11</button>
+  <button onclick="filterCategory('Class 12')">Class 12</button>
+</div>
+
+<div class="book-grid" id="bookGrid"></div>
+
+<footer>
+  <p>&copy; 2025 Book Bazaar. Designed with Gurukul Traditions.</p>
+  <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+</footer>
+
+<script>
+  const books = [
+    { title: 'NCERT Physics Part 1', category: 'Class 11', price: '₹250', image: 'books.webp' },
+    { title: 'NCERT Chemistry Part 1', category: 'Class 11', price: '₹250', image: 'books.webp' },
+    { title: 'NCERT Mathematics', category: 'Class 11', price: '₹200', image: 'books.webp' },
+    { title: 'NCERT Physics Part 2', category: 'Class 12', price: '₹280', image: 'books.webp' },
+    { title: 'Mathematics - Class 11', author: 'Author 1', price: '₹350', image: 'books.webp' },
+    { title: 'Physics - Class 11', author: 'Author 2', price: '₹400', image: 'books.webp' },
+    { title: 'Chemistry - Class 11', author: 'Author 3', price: '₹450', image: 'books.webp' },
+    { title: 'Biology - Class 11', author: 'Author 4', price: '₹500', image: 'books.webp' },
+    { title: 'English - Class 11', author: 'Author 5', price: '₹300', image: 'books.webp' },
+    { title: 'History - Class 11', author: 'Author 6', price: '₹250', image: 'books.webp' },
+    { title: 'Geography - Class 11', author: 'Author 7', price: '₹350', image: 'books.webp' },
+    { title: 'Political Science - Class 11', author: 'Author 8', price: '₹300', image: 'books.webp' },
+    { title: 'Sociology - Class 11', author: 'Author 9', price: '₹350', image: 'books.webp' },
+    { title: 'Economics - Class 11', author: 'Author 10', price: '₹400', image: 'books.webp' },
+    { title: 'Accountancy - Class 11', author: 'Author 11', price: '₹500', image: 'books.webp' },
+    { title: 'Business Studies - Class 11', author: 'Author 12', price: '₹450', image: 'books.webp' },
+    { title: 'Psychology - Class 11', author: 'Author 13', price: '₹400', image: 'books.webp' },
+    { title: 'Entrepreneurship - Class 11', author: 'Author 14', price: '₹350', image: 'books.webp' },
+    { title: 'Mathematics - Class 12', author: 'Author 15', price: '₹350', image: 'books.webp' },
+    { title: 'History - Class 12', author: 'Author 16', price: '₹250', image: 'books.webp' },
+  ];
+
+  const bookGrid = document.getElementById('bookGrid');
+
+  function displayBooks(bookArray) {
+    bookGrid.innerHTML = '';
+    bookArray.forEach(book => {
+      const bookCard = document.createElement('div');
+      bookCard.classList.add('book-card');
+      bookCard.innerHTML = `
+        <img src="${book.image}" alt="${book.title}">
+        <div class="book-card-content">
+          <h3>${book.title}</h3>
+          <div class="price">${book.price}</div>
+          <button>Add to Cart</button>
+        </div>
+      `;
+      bookGrid.appendChild(bookCard);
+    });
+  }
+
+  function filterCategory(category) {
+    const filteredBooks = category === 'All' ? books : books.filter(book => book.category === category);
+    displayBooks(filteredBooks);
+  }
+
+  function searchBooks() {
+    const query = document.getElementById('search').value.toLowerCase();
+    const filteredBooks = books.filter(book => book.title.toLowerCase().includes(query));
+    displayBooks(filteredBooks);
+  }
+
+  displayBooks(books);
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+

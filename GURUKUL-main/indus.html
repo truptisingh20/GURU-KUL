@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrial Chemistry</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: #16a085;
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #1abc9c;
+            padding: 15px 0;
+            position: fixed;
+            top: 100px;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: #f1f1f1;
+            text-decoration: none;
+            padding: 15px 25px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            background-color: #e67e22;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        .hero {
+            background: url('industrial-chemistry-hero.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            padding: 120px 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            margin-top: 160px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 20px auto;
+            animation: fadeInUp 2s ease-in-out;
+            font-weight: 300;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .content {
+            padding: 40px 20px;
+            background-color: #fff;
+            color: #333;
+            text-align: center;
+            animation: fadeInUp 1s ease-in-out;
+            margin-top: 20px;
+        }
+
+        .content h2 {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            color: #16a085;
+            text-transform: uppercase;
+        }
+
+        .content p {
+            font-size: 1.3rem;
+            color: #555;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto 40px auto;
+            text-align: justify;
+        }
+
+        .section-card {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .section-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-card h3 {
+            color: #16a085;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .section-card p {
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #16a085;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+            font-size: 1rem;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Industrial Chemistry</h1>
+</header>
+
+<nav>
+   
+</nav>
+
+<div class="hero">
+    <h1>Revolutionizing Industries with Chemistry</h1>
+    <p>Explore the vital role of chemistry in manufacturing, product development, and industrial innovation.</p>
+</div>
+
+<div class="content" data-aos="fade-up" id="introduction">
+    <h2>Introduction</h2>
+    <p>Industrial chemistry is a branch of chemistry that focuses on the large-scale manufacturing and production of chemicals, materials, and products used in various industries. It combines principles from chemistry, engineering, and environmental science to develop efficient processes for the production of everyday goods like plastics, fertilizers, pharmaceuticals, and fuels. This field plays a crucial role in advancing technologies, improving manufacturing processes, and contributing to economic development.</p>
+</div>
+
+<div class="section-card" data-aos="fade-up" id="applications">
+    <h3>1. Applications of Industrial Chemistry</h3>
+    <p>Industrial chemistry has broad applications across numerous sectors, including:</p>
+    <ul>
+        <li><strong>Chemical Manufacturing:</strong> Production of bulk chemicals such as acids, alkalis, and solvents.</li>
+        <li><strong>Pharmaceuticals:</strong> Synthesis of drugs and medications that improve public health.</li>
+        <li><strong>Materials Science:</strong> Development of materials like polymers, ceramics, and composites used in consumer goods and construction.</li>
+        <li><strong>Food Processing:</strong> Chemical reactions in the preservation and enhancement of food products.</li>
+    </ul>
+    <p>Each of these sectors relies on the principles of industrial chemistry to optimize production, minimize waste, and meet regulatory standards.</p>
+</div>
+
+<div class="section-card" data-aos="fade-up" id="industrial-processes">
+    <h3>2. Industrial Processes in Chemistry</h3>
+    <p>Industrial chemistry encompasses a variety of processes used in the production of chemicals and materials. Some of the key processes include:</p>
+    <ul>
+        <li><strong>Synthesis of Chemicals:</strong> Chemical reactions used to create desired products, such as the Haber process for ammonia production.</li>
+        <li><strong>Polymerization:</strong> The process of creating polymers, such as the production of plastics like polyethylene and polypropylene.</li>
+        <li><strong>Distillation and Filtration:</strong> Techniques used to separate substances in liquid or gas phases, such as in the production of petroleum products and alcoholic beverages.</li>
+        <li><strong>Catalysis:</strong> The use of catalysts to speed up chemical reactions without being consumed in the process, such as in the production of biodiesel.</li>
+    </ul>
+    <p>Each process is designed to maximize efficiency, minimize energy consumption, and reduce the environmental impact of production.</p>
+</div>
+
+<footer>
+    <p>&copy; 2024 Industrial Chemistry Platform. All Rights Reserved.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1200,
+        easing: 'ease-in-out',
+        once: true
+    });
+</script>
+
+</body>
+</html>

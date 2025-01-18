@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn India</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Georgia', serif;
+            background-color: #fff8e7; /* Parchment-like background */
+            color: #4b2c20; /* Earthy tones */
+        }
+        header {
+            background-color: #c4a484; /* Antique gold tone */
+            color: #4b2c20;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 5.0em;
+            font-family: 'Garamond', serif;
+            border-bottom: 4px solid #8b4513;
+        }
+        img {
+            width: 75px; /* Adjust width */
+        
+            border-radius: 50%; /* Makes the image circular */
+            object-fit: cover; /* Ensures the image is not distorted */
+        }
+        nav {
+            background-color: #8b4513;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .menu {
+            display: flex;
+            gap: 15px;
+        }
+        .menu a {
+            color: #ffe4b5; /* Soft gold */
+            text-decoration: none;
+            font-size: 1.2em;
+            font-family: 'Garamond', serif;
+        }
+        .menu a:hover {
+            text-decoration: underline;
+        }
+        .kebab-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .kebab-menu div {
+            width: 30px;
+            height: 4px;
+            background-color: #ffe4b5;
+            margin: 5px 0;
+            border-radius: 2px;
+        }
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+            background-color: #8b4513;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        }
+        .mobile-menu a {
+            color: #ffe4b5;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        .mobile-menu a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            text-align: center;
+            background-image: url('image2.webp'); /* Replace with a cultural image */
+            background-size: cover;
+            background-position: center;
+            height: 100vh; /* Extend the height to full viewport height */
+            color: #f8f4e3; /* Light tone for readability */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; /* Center align text horizontally */
+            box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4); /* Overlay */
+        }
+        .hero h1 {
+            font-size: 4.5em; /* Increase font size for more impact */
+            text-shadow: 3px 3px 8px #000; /* Enhance the shadow effect */
+            margin: 0;
+        }
+        .hero p {
+            font-size: 2em; /* Increase font size */
+            margin-top: 15px;
+            text-shadow: 2px 2px 5px #000;
+        }
+        
+        .features {
+            padding: 30px;
+            background-color: #f4f1ea;
+            text-align: center;
+        }
+        .features h2 {
+            font-size: 2.2em;
+            color: #8b4513;
+            margin-bottom: 20px;
+        }
+        .feature-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .feature-grid div {
+            width: 30%;
+            text-align: center;
+            margin: 15px 0;
+            padding: 20px;
+            border: 3px solid #c4a484;
+            border-radius: 10px;
+            background-color: #fff8e7;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+        }
+        .feature-grid h3 {
+            font-size: 1.5em;
+            color: #8b4513;
+        }
+        footer {
+            background-color: #4b2c20;
+            color: #fff8e7;
+            text-align: center;
+            padding: 15px;
+            border-top: 5px solid #c4a484;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* Remove the underline from links inside the feature grid */
+        .feature-grid a {
+            text-decoration: none;
+            color: #4b2c20; /* Keep the text color as before */
+        }
+
+        .feature-grid a:hover {
+            color: #8b4513; /* Change color on hover for effect */
+        }
+
+        @media screen and (max-width: 768px) {
+            .menu {
+                display: none;
+            }
+            .kebab-menu {
+                display: flex;
+            }
+            .mobile-menu {
+                display: none;
+            }
+            .mobile-menu.active {
+                display: flex;
+            }
+            .feature-grid div {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            const mobileMenu = document.querySelector('.mobile-menu');
+            mobileMenu.classList.toggle('active');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="guru.webp" alt="Company Logo">
+    GURU KUL 
+    </header>
+    <nav>
+        <div class="menu">
+            <a href="announcement.html">*ANNOUNCEMENT</a>
+            <a href="testimonal.html">*TESTIMONALS</a>
+            <a href="about.html">*ABOUT</a>
+            <a href="contact.html">*CONTACT</a>
+            <a href="speciality.html">*SPECIALTY</a>
+        </div>
+    
+    </nav>
+    <div class="hero">
+        <h1>Welcome to Indian Heritage Learning</h1>
+        <p>Explore the richness of India's ancient wisdom and culture.</p>
+    </div>
+    <section class="features">
+        <h2>VIDYA KUND </h2>
+        <div class="feature-grid">
+            <div>
+                <a href="granth.html">
+                <h3>GRANTH MANDIR</h3>
+                <p>FREE STUDY MATERIAL AVAILABLE </p>
+                </a>
+            </div>
+            <div>
+                <a href="GBHOME1.HTML">
+                <h3>GYAN BHANDAR</h3>
+                <p> FREE COURSE TO MAKE STUDIES MORE Interesting</p>
+                </a>
+            </div>
+            <div>
+                <a href="PBHOME.HTML">
+                <h3>PARIKSHA BHAWAN</h3>
+                <p>FREE MOCK TEST FOR EVERYONE</p>
+                </a>
+            </div>
+            <div>
+                <a href="GShome.html">
+                <h3>GYAN SAMACHAR</h3>
+                <p>FREE NEWS UPDATES FOR STUDENTS</p>
+                </a>
+            </div>
+            <div>
+                <a href="GNhome.html">
+                <h3>GURU NIRDESH</h3>
+                <p>FREE GUIDANCE FOR STUDENTS</p>
+                </a>
+            </div>
+            <div>
+                <a href="KVKhome.html">
+                <h3>KHARID VIKRI KENDRA </h3>
+                <p> A PLATFORM FOR BUYING AND SELLING THE BOOKS </p>
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>© 2025 GURU KUL | All Rights Reserved</p>
+        <p>"Preserving India's Heritage for Future Generations"</p>
+    </footer>
+</body>
+</html>

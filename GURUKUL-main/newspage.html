@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gyan Samachar</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    body.light-mode {
+      background: linear-gradient(to bottom, #f8e8c8, #e4d4b1);
+      color: #3e2a12;
+    }
+
+    body.dark-mode {
+      background: linear-gradient(to bottom, #1e1a12, #2b2116);
+      color: #d4b06b;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(90deg, #e2c107, #22a711);
+      color: rgb(241, 241, 241);
+      padding: 20px 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    header img {
+      width: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    header .dark-mode-toggle {
+      cursor: pointer;
+      background-color: #f7e4c1;
+      color: #3e2915;
+      border: none;
+      border-radius: 20px;
+      padding: 0.5rem 1rem;
+      font-size: 1.2rem;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    header .dark-mode-toggle:hover {
+      background-color: #b8904c;
+      color: #fff;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      color: #f7e4c1;
+      padding: 6rem 2rem;
+      background: url('manus.png') no-repeat center;
+      background-size: cover;
+      min-height: 70vh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(50, 30, 10, 0.6);
+      z-index: -1;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    /* News Cards Section */
+    .news-section {
+      padding: 2rem;
+    }
+
+    .news-section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .news-card {
+      background: linear-gradient(to bottom, #f5f2e3, #e7ddc7);
+      border: 2px solid #a67c52;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .news-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    .news-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .news-card-content {
+      padding: 1rem;
+    }
+
+    .news-card h3 {
+      font-size: 1.6rem;
+      margin: 0.5rem 0;
+      color: #3e2a12;
+    }
+
+    .news-card p {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+      color: #555;
+    }
+
+    .news-card a {
+      display: inline-block;
+      margin-top: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      color: #3e2a12;
+      font-style: italic;
+      border-bottom: 1px dashed #3e2a12;
+      padding: 0.5rem;
+      transition: color 0.3s ease, border-bottom 0.3s ease, background-color 0.3s ease;
+    }
+
+    .news-card a:hover {
+      color: #a67c52;
+      border-bottom: 1px dashed #a67c52;
+      background-color: rgba(166, 124, 82, 0.2);
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(to right, #624024, #3e2915);
+      color: #f7e4c1;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body class="light-mode">
+<header>
+  <img src="news.webp" alt="Logo">
+  <h1>Gyan Samachar</h1>
+  <button class="dark-mode-toggle" onclick="toggleDarkMode()">🪔</button>
+</header>
+
+<section class="hero">
+  <h2>Welcome to Gyan Samachar</h2>
+  <p>Your daily dose of ancient wisdom and modern insights.</p>
+</section>
+
+<section class="news-section">
+  <h2>Today's Top Stories</h2>
+  <div class="news-grid" id="newsGrid">
+    <!-- News cards will be dynamically added here -->
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Gyan Samachar. All rights reserved.</p>
+</footer>
+
+<script>
+  // Dummy data
+  const newsData = [
+    {
+    title: "Odisha Government Increases Junior Teachers' Salaries",
+    description:
+      "The Odisha government has raised the monthly remuneration of junior teachers from ₹11,000 to ₹16,000, aiming to improve the financial well-being of educators in the state.",
+    link: "https://www.hindustantimes.com/education/news",
+  },
+  {
+    title: "Bihar State University Service Commission Cancels Interviews",
+    description:
+      "Following a High Court order, the Bihar State University Service Commission has canceled interviews for certain positions, impacting the recruitment process within the state's higher education institutions.",
+    link: "https://www.hindustantimes.com/education/news",
+  },
+  {
+    title: "NIOS Class 12 Results 2024 Released",
+    description:
+      "The National Institute of Open Schooling (NIOS) has announced the Class 12 examination results for 2024. Students can check their results on the official NIOS website.",
+    link: "https://www.hindustantimes.com/education/news",
+  },
+  {
+    title: "IIT Patna Opens Applications for PhD Programme Spring 2025 Session",
+    description:
+      "The Indian Institute of Technology (IIT) Patna has begun accepting applications for its PhD program for the Spring 2025 session. Working professionals, including IIT Patna staff, may apply for part-time PhD admission.",
+    link: "https://www.ndtv.com/topic/education-news",
+  },
+  {
+    title: "Class 5 to Be Taught at 2,335 More Primary Schools in West Bengal",
+    description:
+      "The West Bengal government has decided to introduce Class 5 in 2,335 additional primary schools, expanding the scope of primary education in the state.",
+    link: "https://www.ndtv.com/topic/education-news",
+  },
+  {
+    title: "Delhi University to Conduct Open Book Exams for Final Year Students",
+    description:
+      "Delhi University has announced that it will conduct open book exams for final year students in online mode. The exams will be held in two phases, with the first phase scheduled to begin on March 15.",
+    link: "https://www.ndtv.com/topic/education-news",
+  },
+  {
+    title: "CBSE Class 10, 12 Term 1 Results Expected Soon",
+    description:
+      "The Central Board of Secondary Education (CBSE) is expected to announce the results of the Class 10 and 12 Term 1 exams soon. Students can check their results on the official CBSE website.",
+    link: "https://www.ndtv.com/topic/education-news",
+  },
+  {
+    title: "Karnataka SSLC Exams to Begin on March 28",
+    description:
+      "The Karnataka Secondary Education Examination Board (KSEEB) has announced that the SSLC exams will begin on March 28 and conclude on April 11. The exams will be conducted in offline mode.",
+    link: "https://www.ndtv.com/topic/education-news",
+  },
+  {
+    title: "UPSC Civil Services Prelims 2025 Notification Released",
+    description:
+      "The Union Public Service Commission (UPSC) has released the notification for the Civil Services Preliminary Examination 2025. The exam is scheduled to be held on June 5, 2025.",
+    link: "https://www.ndtv.com/topic/education-news",
+  },
+  {
+    title: "JEE Main 2025 Registration Begins",
+    description:
+      "The National Testing Agency (NTA) has started the registration process for JEE Main 2025. The exam will be conducted in four sessions, with the first session scheduled to begin on April 7.",
+    link: "https://www.ndtv.com/topic/education-news",
+  },
+  {
+    title: "NEET UG 2025: Application Process to Begin Next Month",
+    description:
+      "The National Testing Agency (NTA) has announced that the application process for NEET UG 2025 will begin in February, with the exam scheduled for May.",
+    link: "https://www.ndtv.com/education",
+  },
+  {
+    title: "Delhi Schools to Introduce AI in Curriculum",
+    description:
+      "Delhi schools will soon introduce Artificial Intelligence (AI) as part of the curriculum to enhance students' technological skills.",
+    link: "https://www.hindustantimes.com/education",
+  },
+  {
+    title: "Government to Launch New Scholarship Scheme for Economically Weaker Students",
+    description:
+      "The central government is planning to launch a new scholarship scheme targeting economically weaker students to ensure access to higher education.",
+    link: "https://www.timesnownews.com",
+  },
+  {
+    title: "CBSE Board Exams 2025: Practical Exams to Start in January",
+    description:
+      "CBSE has announced that the practical exams for Class 10 and 12 Board Exams 2025 will begin in January, with detailed guidelines to follow.",
+    link: "https://www.cbse.gov.in",
+  },
+  {
+    title: "State Education Department Plans Teacher Training Program",
+    description:
+      "The Maharashtra Education Department has announced a comprehensive teacher training program to improve teaching quality in government schools.",
+    link: "https://www.educationworld.in",
+  },
+  {
+    title: "Karnataka Approves New Skill Development Program for College Students",
+    description:
+      "The Karnataka government has approved a new skill development program aimed at improving employability among college students.",
+    link: "https://www.deccanherald.com",
+  },
+  {
+    title: "Private Universities Seek Fee Hike Approval",
+    description:
+      "Several private universities across India have approached the government seeking approval for a fee hike in the upcoming academic year.",
+    link: "https://www.thehindu.com",
+  },
+  {
+    title: "India Among Top 10 Nations in Global University Rankings",
+    description:
+      "India has secured a position among the top 10 nations in the global university rankings for 2025, with several IITs and IIMs leading the list.",
+    link: "https://www.ndtv.com/education",
+  },
+  {
+    title: "Kerala Schools to Provide Free Tablets to Students",
+    description:
+      "The Kerala government has announced an initiative to distribute free tablets to school students as part of its digital education program.",
+    link: "https://www.thehindu.com",
+  },
+
+];
+
+console.log(newsData);
+
+
+  // Add news cards dynamically
+  const newsGrid = document.getElementById("newsGrid");
+  newsData.forEach(news => {
+    const card = document.createElement("div");
+    card.className = "news-card";
+    card.innerHTML = `
+      <img src="${news.image}" alt="${news.title}">
+      <div class="news-card-content">
+        <h3>${news.title}</h3>
+        <p>${news.description}</p>
+        <a href="${news.link}">Read More</a>
+      </div>
+    `;
+    newsGrid.appendChild(card);
+  });
+
+  // Toggle Dark Mode
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+  }
+</script>
+</body>
+</html>
+
+
+
+

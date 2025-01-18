@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics - Online E-Learning Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f0f0f0;
+            color: #2d3436;
+            line-height: 1.6;
+            overflow-x: hidden;
+            padding-top: 50px;
+        }
+
+        /* Header Section */
+        header {
+            background: #1e2a47; /* Dark Blue */
+            color: #f1f1f1;
+            text-align: center;
+            padding: 30px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        img {
+            width: 70px; /* Adjust width */
+            border-radius: 50%; /* Makes the image circular */
+            object-fit: cover; /* Ensures the image is not distorted */
+        }
+        header h1 {
+            font-size: 3rem;
+            font-weight: 600;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #34495e; /* Dark Greyish Blue */
+            padding: 15px 0;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav a {
+            color: #f1f1f1;
+            text-decoration: none; /* Remove underline */
+            padding: 12px 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+        nav a:hover {
+            background-color: #f1c40f; /* Yellow */
+            color: #2d3436;
+            border-radius: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: #2d3436; /* Dark Grey */
+            color: #f1f1f1;
+            padding: 150px 20px;
+            text-align: center;
+            position: relative;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeInUp 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Key Topics Section */
+        .key-topics {
+            padding: 80px 20px;
+            background-color: #ecf0f1;
+        }
+        .key-topics h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #3498db; /* Blue */
+            margin-bottom: 40px;
+        }
+        .key-topics ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+        .key-topics li {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .key-topics li:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        .key-topics li h3 {
+            font-size: 1.6rem;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+        .key-topics li p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        /* Remove underline from the 11th and 12th Standard links */
+        #standard-links a {
+            text-decoration: none;
+        }
+
+        /* Remove underline from the Key Topics links */
+        #key-topics a {
+            text-decoration: none;
+        }
+
+        /* Resources Section */
+        .resources {
+            padding: 80px 20px;
+            background-color: #f8f9fa;
+        }
+        .resources h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #3498db; /* Blue */
+            margin-bottom: 40px;
+        }
+        .resource-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+        }
+        .resource-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        .resource-card a {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #3498db;
+            text-decoration: none; /* Remove underline */
+            transition: color 0.3s ease;
+        }
+        .resource-card a:hover {
+            color: #2c3e50;
+        }
+        .resource-card p {
+            font-size: 1rem;
+            color: #555;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Ask Doubt Section */
+        .ask-doubt {
+            padding: 80px 20px;
+            background-color: #ecf0f1;
+        }
+        .ask-doubt h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #3498db; /* Blue */
+            margin-bottom: 40px;
+        }
+        .ask-doubt p {
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #555;
+        }
+        .ask-doubt-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .ask-doubt-form input, .ask-doubt-form textarea {
+            width: 100%;
+            max-width: 600px;
+            padding: 15px;
+            margin: 10px 0;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .ask-doubt-form button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .ask-doubt-form button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #34495e; /* Dark Greyish Blue */
+            color: #f1f1f1;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="teacher.webp" alt="Company Logo">
+        <h1>Physics Ke Guru Dev</h1>
+    </header>
+    
+    <div class="hero">
+        <h1>Unlock the Mysteries of Physics</h1>
+        <p>Explore the fundamental forces of nature and the principles that govern the universe with our interactive physics courses.</p>
+    </div>
+    
+
+    <!-- 11th and 12th Standard Section -->
+    <section id="standard-links" class="key-topics">
+        <h2>11th and 12th Standard</h2>
+        <ul>
+            <li>
+                <a href="11th-phy-portion.html">
+                    <h3>11th Standard Portion</h3>
+                </a>
+            </li>
+            <li>
+                <a href="12th-phy-portion.html">
+                    <h3>12th Standard Portion</h3>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Key Topics Section -->
+    <section id="key-topics" class="key-topics">
+        <h2>Key Topics</h2>
+        <ul>
+            <li>
+                <a href="classimech.html">
+                 <h3>Classical Mechanics</h3>
+                 <p>Learn the fundamentals of motion, forces, and energy in classical mechanics.</p>
+                </a>
+            </li>
+            <li>
+                <a href="electro.html">
+                 <h3>Electromagnetism</h3>
+                 <p>Explore the principles behind electricity, magnetism, and their interaction.</p>
+                </a>
+            </li>
+            <li>
+                <a href="thermo.html">
+                 <h3>Thermodynamics</h3>
+                 <p>Understand the laws of heat, energy, and work in thermodynamic processes.</p>
+                </a>
+            </li>
+            <li>
+                <a href="quan.html">
+                 <h3>Quantum Mechanics</h3>
+                 <p>Dive into the world of particles at the quantum level and their strange behaviors.</p>
+                </a>
+            </li>
+            <li>
+                <a href="relat.html">
+                <h3>Relativity</h3>
+                <p>Study the theory of relativity and its effects on time and space.</p>
+                </a>
+            </li>
+            <li>
+                <a href="optics.html">
+                <h3>Optics</h3>
+                <p>Learn about light behavior, lenses, and mirrors in optical systems.</p>
+                </a>
+            </li>
+            <li>
+                <a href="partiphy.html">
+                <h3>Particle Physics</h3>
+                <p>Examine the fundamental particles that make up the universe.</p>
+                </a>
+            </li>
+            <li>
+                <a href="astro.html">
+                <h3>Astrophysics</h3>
+                <p>Explore the physics of the universe, stars, galaxies, and cosmology.</p>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <!-- Our Resources Section -->
+    <div class="resources" id="resources">
+        <h2>SOME FREE RESOURCES FOR PHYSICS STUDENTS</h2>
+      
+        <div class="resource-card">
+            <a href="https://youtu.be/rm3i6cIxcFE?si=qzOQ2jl-makG9pb4" target="_blank">Physics Guru Video </a>
+            <p>Free video lectures on physics.</p>
+        </div>
+        <div class="resource-card">
+            <a href="https://www.khanacademy.org/science/physics" target="_blank">Khan Academy</a>
+            <p></p>
+        </div>
+        <div class="resource-card">
+            <a href="https://www.physicsclassroom.com" target="_blank">The Physics Classroom</a>
+            <p></p>
+        </div>
+        <div class="resource-card">
+            <a href="https://phet.colorado.edu" target="_blank">PhET Interactive Simulations</a>
+            <p></p>
+        </div>
+        <div class="resource-card">
+            <a href="https://hyperphysics.phy-astr.gsu.edu" target="_blank">HyperPhysics</a>
+            <p></p>
+        </div>
+        <div class="resource-card">
+            <a href="https://www.physicsforums.com" target="_blank">Physics Forums</a>
+            <p></p>
+        </div>
+    </div>
+
+    
+
+    <footer style="background-color: #333; color: white; padding: 40px 20px; text-align: center;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
+            <!-- Copyright Section -->
+            <div style="font-size: 1em; color: #bbb;">
+                <p>&copy; 2024 Guru Dev. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
+ 

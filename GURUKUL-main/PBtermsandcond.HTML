@@ -1,0 +1,436 @@
+ <!DOCTYPE html><html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Bazaar: 11th & 12th Complete Guide</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* General Styling */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f4f7;
+      color: #333;
+      box-sizing: border-box;
+    }
+
+    header {
+      background: linear-gradient(90deg, #2c3e50, #2980b9);
+      padding: 20px;
+      color: white;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      margin-top: 15px;
+    }
+
+    nav button {
+      margin: 5px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      background-color: #ff5733;
+      color: white;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+    }
+
+    nav button:hover {
+      background-color: #e04e2e;
+    }
+
+    .search-bar {
+      margin: 30px auto;
+      display: flex;
+      justify-content: center;
+      max-width: 900px;
+      padding: 5px;
+    }
+
+    .search-bar input {
+      width: 75%;
+      padding: 15px;
+      border: 2px solid #007bff;
+      border-radius: 30px 0 0 30px;
+      outline: none;
+      font-size: 1.1rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .search-bar input:focus {
+      border-color: #0056b3;
+      box-shadow: 0 0 10px rgba(0, 87, 179, 0.4);
+    }
+
+    .search-bar button {
+      padding: 15px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 0 30px 30px 0;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: background 0.3s ease;
+    }
+
+    .search-bar button:hover {
+      background-color: #218838;
+    }
+
+    /* Book Sections */
+    .section {
+      padding: 50px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+      color: #2c3e50;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .book-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .book-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .book-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .book-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .book-card h3 {
+      margin: 15px 0 10px;
+      color: #2980b9;
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+
+    .book-card p {
+      margin: 5px 0;
+      font-size: 1.1rem;
+      color: #777;
+      line-height: 1.5;
+    }
+
+    .book-card button {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      background: #f39c12;
+      color: #333;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: background 0.3s ease;
+    }
+
+    .book-card button:h…
+[4:36 PM, 1/4/2025] Trupti College (LR): modify kar lena apne hissab se
+[5:28 PM, 1/4/2025] Trupti College (LR): <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Section</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #ffffff, #dcdcdc, #f1f1f1);
+            background-size: 400% 400%;
+            animation: gradientAnimation 20s ease infinite;
+            color: #333;
+            transition: background 1s ease;
+            overflow-x: hidden;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #34495e;
+            color: white;
+            padding: 30px 40px;
+            text-align: center;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+            margin-bottom: 50px;
+            border-radius: 12px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        img {
+            width: 100px; /* Adjust width */
+           
+            border-radius: 50%; /* Makes the image circular */
+            object-fit: cover; /* Ensures the image is not distorted */
+          }
+          
+        header h1 {
+            font-size: 3.0em;
+            margin: 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #ecf0f1;
+            animation: fadeInText 2s ease-out;
+        }
+
+        /* Container Styling */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+            animation: fadeIn 2s ease-in-out;
+            transform: translateY(20px);
+        }
+
+        .container:hover {
+            transform: translateY(0);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Section Headings */
+        h2 {
+            font-size: 28px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            animation: fadeInText 1.5s ease-out;
+        }
+
+        /* List Styling */
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        /* Button Styling */
+        .button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            background-color: #2980b9;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .button:hover {
+            background-color: #3498db;
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .button:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #3498db;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .button:hover:before {
+            transform: scaleX(1);
+        }
+
+        /* Card Layout for Content */
+        .card {
+            background-color: #ecf0f1;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            perspective: 1000px;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .card:hover {
+            transform: rotateY(10deg) scale(1.02);
+        }
+
+        /* Google reCAPTCHA */
+        .g-recaptcha {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            font-size: 24px;
+            color: #3498db;
+        }
+
+        .scroll-indicator:before {
+            content: '↓';
+            animation: scrollAnim 1.5s infinite alternate;
+        }
+
+        /* Fade-in and text animation */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fadeInText {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Gradient Animation */
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        footer {
+            background-color: #34495e;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+            font-size: 1rem;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="EXAM.webp" alt="Company Logo">
+    <h1>PARIKSHA BHAWAN</h1>
+</header>
+
+<div class="container">
+    <h2>Rules and Regulations</h2>
+    <div class="card">
+        <ul>
+            <li>Each quiz has a time limit, which will be displayed at the start of the quiz.</li>
+            <li>Do not refresh or close the browser during the quiz.</li>
+            <li>Cheating or using external help is prohibited.</li>
+            <li>Each question must be answered within the allocated time.</li>
+            <li>Points will be awarded based on the correctness and speed of answers.</li>
+        </ul>
+    </div>
+
+    <h2>Terms and Conditions</h2>
+    <div class="card">
+        <ul>
+            <li>By participating in the quiz, you agree to abide by the rules and regulations.</li>
+            <li>The organizers reserve the right to disqualify participants for any misconduct.</li>
+            <li>Any disputes will be resolved by the organizers, and their decision is final.</li>
+            <li>Personal information collected will only be used for quiz-related purposes.</li>
+            <li>By participating, you consent to these terms and conditions.</li>
+        </ul>
+    </div>
+
+    <!-- Google reCAPTCHA -->
+    <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY_HERE"></div>
+
+    <a href="PBhomepage.html" class="button">Approve All</a>
+</div>
+
+<div class="scroll-indicator"></div>
+
+</body>
+</html>
+<footer>
+    <p>&copy; 2024 Physics Learning Platform. All Rights Reserved.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1200,
+        easing: 'ease-in-out',
+        once: true
+    });
+</script>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemistry - Online E-Learning Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f4f4f9;
+            color: #2f3640;
+            line-height: 1.6;
+            overflow-x: hidden;
+            padding-top: 50px;
+        }
+
+        /* Header Section */
+        header {
+            background: #2c3e50; /* Dark Blue */
+            color: #ecf0f1;
+            text-align: center;
+            padding: 30px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        img {
+            width: 70px; /* Adjust width */
+            border-radius: 50%; /* Makes the image circular */
+            object-fit: cover; /* Ensures the image is not distorted */
+        }
+        header h1 {
+            font-size: 3rem;
+            font-weight: 600;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #34495e; /* Dark Greyish Blue */
+            padding: 15px 0;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav a {
+            color: #ecf0f1;
+            text-decoration: none; /* No underline */
+            padding: 12px 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+        nav a:hover {
+            background-color: #16a085; /* Teal */
+            color: #ecf0f1;
+            border-radius: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: #2c3e50; /* Dark Blue */
+            color: #ecf0f1;
+            padding: 150px 20px;
+            text-align: center;
+            position: relative;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeInUp 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Key Topics Section */
+        .key-topics {
+            padding: 80px 20px;
+            background-color: #ecf0f1;
+        }
+        .key-topics h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #2980b9; /* Blue */
+            margin-bottom: 40px;
+        }
+        .key-topics ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+        .key-topics li {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .key-topics li:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        .key-topics li h3 {
+            font-size: 1.6rem;
+            color: #2980b9;
+            margin-bottom: 15px;
+        }
+        .key-topics li p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        /* Resources Section */
+        .resources {
+            padding: 80px 20px;
+            background-color: #f9f9f9;
+        }
+        .resources h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #2980b9; /* Blue */
+            margin-bottom: 40px;
+        }
+        .resource-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+        }
+        .resource-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        .resource-card a {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #2980b9;
+            text-decoration: none; /* No underline */
+            transition: color 0.3s ease;
+        }
+        .resource-card a:hover {
+            color: #2c3e50;
+        }
+        .resource-card p {
+            font-size: 1rem;
+            color: #555;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Ask Doubt Section */
+        .ask-doubt {
+            padding: 80px 20px;
+            background-color: #ecf0f1;
+        }
+        .ask-doubt h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #2980b9; /* Blue */
+            margin-bottom: 40px;
+        }
+        .ask-doubt p {
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #555;
+        }
+        .ask-doubt-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .ask-doubt-form input, .ask-doubt-form textarea {
+            width: 100%;
+            max-width: 600px;
+            padding: 15px;
+            margin: 10px 0;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .ask-doubt-form button {
+            background-color: #2980b9;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .ask-doubt-form button:hover {
+            background-color: #1f618d;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #34495e; /* Dark Greyish Blue */
+            color: #ecf0f1;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        /* Remove underline from all links globally */
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="teacher.webp" alt="Company Logo">
+        <h1>Chemistry Ke Guru Dev</h1>
+    </header>
+    <nav>
+    </nav>
+    <div class="hero">
+        <h1>Discover the Wonders of Chemistry</h1>
+        <p>Explore the elements, reactions, and the science that shapes our world with our comprehensive chemistry courses.</p>
+    </div>
+
+    <!-- 11th and 12th Standard Section -->
+    <section id="standard-links" class="key-topics">
+        <h2>11th and 12th Standard</h2>
+        <ul>
+            <li>
+                <a href="11th-chem-portion.html">
+                    <h3>11th Standard Portion</h3>
+                </a>
+            </li>
+            <li>
+                <a href="12-portion-chem-.html">
+                    <h3>12th Standard Portion</h3>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Key Topics Section -->
+    <section id="key-topics" class="key-topics">
+        <h2>Overview Of Various Type Of Chemistry</h2>
+        <ul>
+            <li>
+                <a href="org.html">
+                 <h3>Organic Chemistry</h3>
+                 <p>Learn about the structure, properties, and reactions of organic compounds.</p>
+                </a>
+            </li>
+            <li>
+                <a href="inorg.html">
+                 <h3>Inorganic Chemistry</h3>
+                 <p>Explore the properties and behavior of inorganic compounds and materials.</p>
+                </a> 
+            </li>
+            <li>
+                <a href="phy.html">
+                  <h3>Physical Chemistry</h3>
+                  <p>Understand the principles governing the physical properties of matter and chemical reactions.</p>
+                </a>
+            </li>
+            <li>
+                <a href="analytical.html">
+                <h3>Analytical Chemistry</h3>
+                <p>Learn techniques for analyzing the composition of substances and their properties.</p>
+                </a>
+            </li>
+            <li>
+                <a href="biochem.html">
+                <h3>Biochemistry</h3>
+                <p>Study the chemistry of biological processes and the molecules that make life possible.</p>
+                </a>
+            </li>
+            <li>
+                <a href="envir.html">
+                <h3>Environmental Chemistry</h3>
+                <p>Examine the impact of chemicals on the environment and how they influence our planet.</p>
+                </a>
+            </li>
+            <li>
+                <a href="poly.html">
+                <h3>Polymer Chemistry</h3>
+                <p>Discover the world of polymers, their properties, and applications in everyday life.</p>
+                </a>
+            </li>
+            <li>
+                <a href="indus.html">
+                 <h3>Industrial Chemistry</h3>
+                 <p>Understand the chemistry behind large-scale industrial processes and manufacturing.</p>
+              </a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Our Resources Section -->
+    <div class="resources" id="resources">
+        <h2>SOME FREE RESOURCES FOR CHEMISTRY STUDENTS </h2>
+        <div class="resource-card">
+            <a href="https://youtu.be/Qy0Q_AYs63Y?si=cmiQJoOIdmhXaMTZ" target="_blank">Chemistry Guru Video</a>
+        </div>
+        <div class="resource-card">
+            <a href="https://www.khanacademy.org/science/chemistry" target="_blank">Khan Academy</a>
+        </div>
+        <div class="resource-card">
+            <a href="https://chemcollective.org" target="_blank">ChemCollectiv</a>
+        </div>
+        <div class="resource-card">
+            <a href="https://www.masterorganicchemistry.com" target="_blank">Master Organic Chemistry</a>
+        </div>
+        <div class="resource-card">
+            <a href="https://www.openstax.org/subjects/science" target="_blank">OpenStax - Free Chemistry Textbooks</a>
+        </div>
+        <div class="resource-card">
+            <a href="https://www.periodicvideos.com" target="_blank">Periodic Videos</a>
+        </div>
+    </div>
+
+    
+
+    <footer style="background-color: #333; color: white; padding: 40px 20px; text-align: center;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
+            <div style="font-size: 1em; color: #bbb;">
+                <p>&copy; 2024 Guru Dev. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

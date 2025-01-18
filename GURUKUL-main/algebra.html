@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algebra - 11th Standard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: #34495e;
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #2c3e50;
+            padding: 15px 0;
+            position: fixed;
+            top: 100px;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: #f1f1f1;
+            text-decoration: none;
+            padding: 15px 25px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            background-color: #e67e22;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        .hero {
+            background: url('algebra-hero.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            padding: 120px 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            margin-top: 160px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 20px auto;
+            animation: fadeInUp 2s ease-in-out;
+            font-weight: 300;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .content {
+            padding: 40px 20px;
+            background-color: #fff;
+            color: #333;
+            text-align: center;
+            animation: fadeInUp 1s ease-in-out;
+            margin-top: 20px;
+        }
+
+        .content h2 {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            text-transform: uppercase;
+        }
+
+        .content p {
+            font-size: 1.3rem;
+            color: #555;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto 40px auto;
+            text-align: justify;
+        }
+
+        .section-card {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .section-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-card h3 {
+            color: #3498db;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .section-card p {
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #34495e;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+            font-size: 1rem;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Algebra</h1>
+</header>
+
+<nav>
+    
+</nav>
+
+<div class="hero">
+    <h1>Explore the World of Algebra</h1>
+    <p>Learn the fundamentals of algebra, its concepts, key formulas, and practical applications in solving real-world problems.</p>
+</div>
+
+<div class="content" data-aos="fade-up" id="introduction">
+    <h2>Introduction</h2>
+    <p>Algebra is a branch of mathematics that deals with symbols and the rules for manipulating these symbols. It provides a powerful framework for solving equations, analyzing relationships, and understanding patterns in numbers and structures.</p>
+</div>
+
+<div class="section-card" data-aos="fade-up" id="concepts">
+    <h3>1. Key Concepts in Algebra</h3>
+    <p>Algebra involves various concepts, including:<br>
+        - **Variables**: Symbols used to represent numbers.<br>
+        - **Equations**: Mathematical statements expressing equality.<br>
+        - **Functions**: Relationships between inputs and outputs.<br>
+        - **Inequalities**: Comparisons between values.
+    </p>
+</div>
+
+<div class="section-card" data-aos="fade-up" id="formulas">
+    <h3>2. Essential Algebraic Formulas</h3>
+    <p>Some important formulas in algebra include:<br>
+        - **Quadratic Formula**: \( x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \)<br>
+        - **Slope Formula**: \( m = \frac{y_2 - y_1}{x_2 - x_1} \)<br>
+        - **Point-Slope Form**: \( y - y_1 = m(x - x_1) \)<br>
+        - **Arithmetic Sequence**: \( a_n = a + (n-1)d \)
+    </p>
+</div>
+
+<div class="section-card" data-aos="fade-up" id="applications">
+    <h3>3. Applications of Algebra</h3>
+    <p>Algebra has numerous applications in real life, such as:<br>
+        - Solving problems in physics and engineering.<br>
+        - Financial modeling and budgeting.<br>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Math Learning Platform. All Rights Reserved.</p>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+    
+    </body>
+    </html>

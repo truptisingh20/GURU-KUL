@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genetics - Online E-Learning Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+        }
+
+        header.scrolled {
+            background: #1f4d77;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #34495e;
+            padding: 15px 0;
+            position: fixed;
+            top: 100px;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: #f1f1f1;
+            text-decoration: none;
+            padding: 15px 25px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            background-color: #e67e22;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('hero-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            padding: 120px 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            margin-top: 160px; /* Increased margin to ensure it's visible */
+            background-color: rgba(0, 0, 0, 0.5); /* Added a semi-transparent background to ensure text visibility */
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 20px auto;
+            animation: fadeInUp 2s ease-in-out;
+            font-weight: 300;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Content Section */
+        .content {
+            padding: 40px 20px;
+            background-color: #fff;
+            color: #333;
+            text-align: center;
+            animation: fadeInUp 1s ease-in-out;
+            margin-top: 20px;
+        }
+
+        .content h2 {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            text-transform: uppercase;
+        }
+
+        .content p {
+            font-size: 1.3rem;
+            color: #555;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto 40px auto;
+            text-align: justify;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .section-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-card h3 {
+            color: #3498db;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .section-card p {
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #34495e;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+            font-size: 1rem;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Genetics: The Science of Heredity</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="genetics.html">Genetics</a>
+    <a href="cell-biology.html">Cell Biology</a>
+    <a href="evolution.html">Evolution</a>
+</nav>
+
+<!-- Hero Section -->
+<div class="hero">
+    <h1>Welcome to the World of Genetics</h1>
+    <p>Delve into the fascinating study of genes, inheritance patterns, and how traits are passed from one generation to the next.</p>
+</div>
+
+<!-- Content Section -->
+<div class="content" data-aos="fade-up">
+    <h2>What is Genetics?</h2>
+    <p>Genetics is the study of heredity, the process by which organisms inherit traits from their parents. It involves understanding how genes, DNA, and chromosomes carry genetic information that shapes organisms' traits and functions. Genetics has major implications for medicine, agriculture, and biology.</p>
+</div>
+
+<!-- Section Cards -->
+<div class="section-card" data-aos="fade-up">
+    <h3>1. DNA Structure</h3>
+    <p>DNA (Deoxyribonucleic acid) is a molecule that contains the instructions an organism needs to grow, develop, and function. It is made up of a double helix structure, composed of nucleotides which include a sugar, phosphate group, and nitrogenous base.</p>
+</div>
+
+<div class="section-card" data-aos="fade-up">
+    <h3>2. Genes and Chromosomes</h3>
+    <p>Genes are segments of DNA that carry information for making proteins, which determine the traits of an organism. These genes are located on chromosomes, which are structures found in the cell nucleus that store genetic information.</p>
+</div>
+
+<div class="section-card" data-aos="fade-up">
+    <h3>3. Mendelian Inheritance</h3>
+    <p>Mendel's laws of inheritance describe how traits are inherited through generations. The two main principles are the Law of Segregation and the Law of Independent Assortment, explaining how alleles are distributed in gametes during reproduction.</p>
+</div>
+
+<div class="section-card" data-aos="fade-up">
+    <h3>4. Genetic Mutations</h3>
+    <p>Genetic mutations are changes in the DNA sequence that can lead to variations in traits. These mutations can be inherited or acquired and may result in diseases or provide advantages that influence natural selection.</p>
+</div>
+
+<div class="section-card" data-aos="fade-up">
+    <h3>5. Genetic Engineering</h3>
+    <p>Genetic engineering involves manipulating an organism's genome to achieve desired traits. This technology is used in agriculture, medicine, and biotechnology for purposes such as producing genetically modified organisms (GMOs) and gene therapy.</p>
+</div>
+
+<div class="section-card" data-aos="fade-up">
+    <h3>6. DNA Replication</h3>
+    <p>DNA replication is the process by which a cell makes an identical copy of its DNA. It ensures that genetic information is accurately passed to the next generation of cells during cell division.</p>
+</div>
+
+<div class="section-card" data-aos="fade-up">
+    <h3>7. RNA and Protein Synthesis</h3>
+    <p>RNA is a nucleic acid that plays a key role in protein synthesis. It transcribes the genetic information from DNA into a format that can be used to assemble proteins in a process called translation.</p>
+</div>
+
+<div class="section-card" data-aos="fade-up">
+    <h3>8. Inheritance Patterns</h3>
+    <p>Inheritance patterns describe how traits are passed from parents to offspring. Common inheritance patterns include autosomal dominant, autosomal recessive, and X-linked inheritance.</p>
+</div>
+
+<div class="section-card" data-aos="fade-up">
+    <h3>9. Genetic Disorders</h3>
+    <p>Genetic disorders are diseases caused by abnormalities in an individual's DNA. These disorders can be inherited or caused by mutations, such as cystic fibrosis, sickle cell anemia, and Huntington's disease.</p>
+</div>
+
+<div class="section-card" data-aos="fade-up">
+    <h3>10. Human Genome Project</h3>
+    <p>The Human Genome Project was an international research effort to map the entire human genome. The project aimed to identify and sequence all of the genes in human DNA, revolutionizing our understanding of human genetics.</p>
+</div>
+
+<div class="section-card" data-aos="fade-up">
+    <h3>11. Epigenetics</h3>
+    <p>Epigenetics is the study of changes in gene expression that do not involve alterations to the underlying DNA sequence. These changes can be influenced by environmental factors and can be passed on to future generations.</p>
+</div>
+
+<div class="section-card" data-aos="fade-up">
+    <h3>12. Genetic Counseling</h3>
+    <p>Genetic counseling is a service that provides individuals and families with information about genetic conditions, their risks, and available testing options. It helps people make informed decisions about their health and family planning.</p>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Genetics Learning. All Rights Reserved.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1200,
+        easing: 'ease-in-out',
+        once: true
+    });
+</script>
+
+</body>
+</html>

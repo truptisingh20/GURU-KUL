@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Haven - Buy & Sell Books</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+     /* Header Styles */
+     header {
+        background: linear-gradient(90deg, #e2c107, #22a711);
+        color: rgb(241, 241, 241);
+        padding: 20px 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    img {
+        width: 75px; /* Adjust width */
+       
+        border-radius: 50%; /* Makes the image circular */
+        object-fit: cover; /* Ensures the image is not distorted */
+      }
+      
+    header h1 {
+        font-size: 3.0em;
+        margin: 0;
+    }
+    
+    .kebab-menu {
+        position: relative;
+        display: inline-block;
+    }
+
+    .kebab-menu button {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+
+    .kebab-menu-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .kebab-menu-content a {
+        display: block;
+        padding: 10px 15px;
+        color: #333;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .kebab-menu-content a:hover {
+        background-color: #f0f4f8;
+        color: #2575fc;
+    }
+
+    .kebab-menu:hover .kebab-menu-content {
+        display: block;
+    }
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 50px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    .navbar .logo {
+      font-size: 24px;
+      font-weight: 600;
+      color: #2575fc;
+    }
+
+    .navbar .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    .navbar .nav-links a {
+      font-weight: 500;
+      font-size: 16px;
+      color: #333;
+      transition: color 0.3s ease;
+    }
+
+    .navbar .nav-links a:hover {
+      color: #2575fc;
+    }
+
+    .navbar .cta-button {
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      background-color: #2575fc;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .navbar .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 100vh;
+      background: url('gyanbhandar.webp') no-repeat center center/cover;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      max-width: 600px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero .cta-button {
+      padding: 15px 30px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      background-color: #28e917;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hero .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Features Section */
+    .features {
+      padding: 80px 20px;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    .features h2 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .feature {
+      background: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .feature h3 {
+      font-size: 1.5rem;
+      color: #2575fc;
+      margin-bottom: 15px;
+    }
+
+    .feature p {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    /* Footer */
+    .footer {
+      background: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .footer p {
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <img src="gyanbhandar.webp" alt="Company Logo">
+        <h1>GYAN BHANDAR </h1>
+        <div class="kebab-menu">
+           
+    </header>
+    
+  </nav>
+
+  <header class="hero">
+    <h1>GYAN BHANDAR</h1>
+    <p>FREE COURSE TO MAKE STUDIES MORE INTERSTING</p>
+    <a href="gyanbhandar.html" class="cta-button">Start Now</a>
+
+  </header>
+
+  
+
+  <footer class="footer">
+    <p>© 2025 Book Haven. All rights reserved. Crafted with love for book enthusiasts.</p>
+  </footer>
+</body>
+</html>

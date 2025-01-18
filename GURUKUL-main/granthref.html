@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>References - Learning Platform</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: linear-gradient(135deg, #f0f4c3, #e1bee7);
+        }
+
+        h1, h2, h3 {
+            font-weight: bold;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(120deg, #42a5f5, #66bb6a);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 4px solid #2e7d32;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        
+        img {
+            width: 100px; /* Adjust width */
+            border-radius: 50%; /* Makes the image circular */
+            object-fit: cover; /* Ensures the image is not distorted */
+            }
+    
+
+        header h1 {
+            font-size: 3.2em;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.4em;
+            margin-top: 10px;
+        }
+
+        /* Main Content */
+        main {
+            padding: 30px;
+            max-width: 1200px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #1b5e20;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        /* Reference Cards */
+        .reference-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .reference-card {
+            background: linear-gradient(145deg, #e8f5e9, #ede7f6);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .reference-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+        }
+
+        .reference-card h3 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #2e7d32;
+        }
+
+        .reference-card p {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .reference-card a {
+            font-size: 1.1em;
+            color: #ffffff;
+            background: linear-gradient(90deg, #42a5f5, #66bb6a);
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            text-align: center;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .reference-card a:hover {
+            background: linear-gradient(90deg, #66bb6a, #42a5f5);
+            transform: scale(1.05);
+        }
+
+        /* Footer Section */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: linear-gradient(120deg, #42a5f5, #66bb6a);
+            color: white;
+            font-size: 1em;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Icon Styles */
+        .icon {
+            font-size: 2.5em;
+            color: #2e7d32;
+            margin-bottom: 15px;
+            transition: color 0.3s;
+        }
+
+        .reference-card .icon:hover {
+            color: #42a5f5;
+        }
+    </style>
+    <!-- Add Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img src="library.webp" alt="Company Logo">
+        <h1>GRANTH MANDIR </h1>
+        <p>FREE ONLINE STUDY MATERIALS GIVEN BY YOUR GURU IN THIS FREE PLATFORM</p>
+    </header>
+    <main>
+        <!-- Textbooks Section -->
+        <section>
+            <h2> TEXTBOOK SOURCE </h2>
+            <div class="reference-cards">
+                <div class="reference-card">
+                    <i class="fas fa-book icon"></i>
+                    <h3>NCERT TEXTBOOK AND SOME REFERENCE BOOKS </h3>
+                    <p> Click here to Get Any NCERT Textbook for Free Of Cost.</p>
+                    <a href="https://ncert.nic.in/textbook.php" target="_blank">VIEW TEXTBOOK</a>
+            
+        </section>
+
+        <!-- Online Resources Section -->
+        <section>
+            <h2> FREE NOTES </h2>
+            <div class="reference-cards">
+                <div class="reference-card">
+                    <i class="fas fa-laptop icon"></i>
+                    <h3> PHYSICS NOTES </h3>
+                    <p></p>
+                    <a href="https://example.com" target="_blank"> PHYSICS NOTES</a>
+                </div>
+                <div class="reference-card">
+                    <i class="fas fa-laptop icon"></i>
+                    <h3>CHEMISTRY NOTES </h3>
+                    <p></p>
+                    <a href="https://example.com" target="_blank"> CHEMISTRY NOTES </a>
+                </div>
+                <div class="reference-card">
+                    <i class="fas fa-laptop icon"></i>
+                    <h3>MATHS NOTES</h3>
+                    <p></p>
+                    <a href="https://example.comh" target="_blank"> MATHS NOTES </a>
+                </div>
+                <div class="reference-card">
+                    <i class="fas fa-laptop icon"></i>
+                    <h3>BIOLOGY NOTES</h3>
+                    <p></p>
+                    <a href="https://example.com" target="_blank"> BIOLOGY NOTES </a>
+                </div>
+                        </div>
+        </section>
+
+        <!-- Scientific Journals Section -->
+        <section>
+            <h2>Scientific Journals</h2>
+            <div class="reference-cards">
+                <div class="reference-card">
+                    <i class="fas fa-newspaper icon"></i>
+                    <h3>Nature</h3>
+                    <p>A leading science journal covering a broad range of scientific disciplines.</p>
+                    <a href="https://www.nature.com" target="_blank">Visit Nature</a>
+                </div>
+                <div class="reference-card">
+                    <i class="fas fa-newspaper icon"></i>
+                    <h3>Science Direct</h3>
+                    <p>Access to scientific articles in areas like Biology, Chemistry, Physics, and Medicine.</p>
+                    <a href="https://www.sciencedirect.com" target="_blank">Visit Science Direct</a>
+                </div>
+                <div class="reference-card">
+                    <i class="fas fa-newspaper icon"></i>
+                    <h3>JSTOR</h3>
+                    <p>Digital library for scholars, researchers, and students. Access to scientific articles and papers.</p>
+                    <a href="https://www.jstor.org" target="_blank">Visit JSTOR</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Learning Platform | References for 11th & 12th Grade</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcements</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: #34495e;
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+        
+        img {
+          width: 100px; /* Adjust width */
+         
+          border-radius: 50%; /* Makes the image circular */
+          object-fit: cover; /* Ensures the image is not distorted */
+        }
+        
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+        }
+
+        .hero {
+            background: url('announcement-bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            padding: 120px 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            margin-top: 160px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 20px auto;
+            animation: fadeInUp 2s ease-in-out;
+            font-weight: 300;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .announcement-section {
+            padding: 40px 20px;
+            background-color: #fff;
+            color: #333;
+            animation: fadeInUp 1s ease-in-out;
+            margin-top: 20px;
+        }
+
+        .announcement-section h2 {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .announcement-card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .announcement-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .announcement-card h3 {
+            color: #3498db;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .announcement-card p {
+            color: #555;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        footer {
+            background-color: #34495e;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+            font-size: 1rem;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+  <img src="teacher.webp" alt="Company Logo">
+    <h1>Announcements From Your Guru </h1>
+</header>
+
+<div class="hero">
+    <h1>Stay Updated</h1>
+    <p>All the latest news, updates, and information about your 11th Standard Mathematics course and events.</p>
+</div>
+
+<div class="announcement-section">
+    <h2>Latest Announcements</h2>
+    <div class="announcement-card" data-aos="fade-up">
+        <h3>New Chapter Upload</h3>
+        <p>The "Probability" chapter video has been uploaded. Check it out in the resources section!</p>
+    </div>
+    <div class="announcement-card" data-aos="fade-up">
+        <h3>Upcoming Test</h3>
+        <p>A test on "Trigonometric Functions" will be conducted on 15th January. Prepare well!</p>
+    </div>
+    <div class="announcement-card" data-aos="fade-up">
+        <h3>Holiday Announcement</h3>
+        <p>The school will remain closed on 26th January for Republic Day. Enjoy your day off!</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Mathematics Guru Dev. All Rights Reserved.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1200,
+        easing: 'ease-in-out',
+        once: true
+    });
+</script>
+
+</body>
+</html>
